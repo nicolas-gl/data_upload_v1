@@ -1,0 +1,72 @@
+public | auth_user_groups                    | table | berso
+ public | auth_user_user_permissions          | table | berso
+ public | background_task                     | table | berso
+ public | background_task_completedtask       | table | berso
+ public | banners_item                        | table | berso
+ public | berso_app_committent                | table | berso
+ public | berso_app_contact                   | table | berso
+ public | berso_app_galleryimage              | table | berso
+ public | berso_app_mainbanner                | table | berso
+ public | berso_app_metamainpage              | table | berso
+ public | berso_app_partner                   | table | berso
+ public | berso_app_person                    | table | berso
+ public | berso_app_seodata                   | table | berso
+ public | berso_app_shop                      | table | berso
+ public | berso_app_shopimage                 | table | berso
+ public | berso_app_siteconfiguration         | table | berso
+ public | berso_app_usersession               | table | berso
+ public | blog_author                         | table | berso
+ public | blog_category                       | table | berso
+ public | blog_gallery                        | table | berso
+ public | blog_galleryimage                   | table | berso
+ public | blog_objectinpost                   | table | berso
+ public | blog_post                           | table | berso
+ public | cart_item                           | table | berso
+ public | cart_order                          | table | berso
+ public | catalog_catalogitem                 | table | berso
+ public | catalog_catalogitem_catalogmenuitem | table | berso
+ public | catalog_catalogitem_material        | table | berso
+ public | catalog_catalogitemimage            | table | berso
+ public | catalog_catalogmaterial             | table | berso
+ public | catalog_catalogmenuitem             | table | berso
+ public | catalog_catalogperiod               | table | berso
+ public | catalog_catalogsort                 | table | berso
+ public | catalog_catalogstyle                | table | berso
+ public | catalog_editor                      | table | berso
+ public | catalog_kurs                        | table | berso
+ public | dashboard_catalogselection          | table | berso
+ public | dashboard_selectionitem             | table | berso
+ public | dashboard_slimbanner                | table | berso
+ public | decorator_brand                     | table | berso
+ public | django_admin_log                    | table | berso
+ public | django_content_type                 | table | berso
+ public | django_migrations                   | table | berso
+ public | django_redirect                     | table | berso
+ public | django_session                      | table | berso
+ public | django_site                         | table | berso
+ public | faq_faqitem                         | table | berso
+ public | pages_page                          | table | berso
+
+
+committent_id
+art
+title_ru
+
+select art, title_ru, committent_id from catalog_catalogitem WHERE committent_id = 12 limit 2
+count
+
+select count(*) from catalog_catalogitem WHERE committent_id = 12 limit 30;
+
+select committent_id, count(*) as items from catalog_catalogitem group by committent_id order by COUNT(*) desc limit 30;
+
+{
+  "label": "localhost",
+  "host": "localhost",
+  "user": "david",
+  "port": 5432,
+  "ssl": false,
+  "database": "berso", 
+  "password": "jw8s0F4"
+}
+
+jupyter nbconvert Berso_Report.ipynb --to html
