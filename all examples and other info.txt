@@ -69,4 +69,6 @@ select committent_id, count(*) as items from catalog_catalogitem group by commit
   "password": "jw8s0F4"
 }
 
-jupyter nbconvert Berso_Report.ipynb --to html
+
+
+jupyter nbconvert --execute main.ipynb --to html --no-input
